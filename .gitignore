@@ -1,0 +1,17 @@
+site
+vivado*
+*~
+*.pyc
+.cxl.ip/
+cxl_error.log
+*.DS_Store
+*.Xil
+
+*.pdf
+*.png
+*.zip
+
+# UVVM
+_Alert.txt
+_Log.txt
+._*
