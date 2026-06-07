@@ -59,7 +59,7 @@ begin
 
     process (AR_1)
     begin
-        if (AR_1 = (others => '0')) then
+        if (AR_1 = (AR_1'range => '0')) then
             DR_1 <= (others    => '0');
         else
             DR_1 <= mem(to_integer(unsigned(AR_1)));
@@ -68,7 +68,7 @@ begin
 
     process (AR_2)
     begin
-        if (AR_2 = (others => '0')) then
+        if (AR_2 = (AR_2'range => '0')) then
             DR_2 <= (others    => '0');
         else
             DR_2 <= mem(to_integer(unsigned(AR_2)));

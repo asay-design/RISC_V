@@ -1,16 +1,164 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x74FF49F23C87B519",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../RISC_V.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2"
+      "tool_version": "2024.2",
+      "validated": "true"
     },
     "design_tree": {
-      "blk_mem_gen_0": ""
+      "blk_mem_gen_0": "",
+      "ALU_0": "",
+      "register_file_0": ""
+    },
+    "interface_ports": {
+      "BRAM_PORTA_0": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:bram:1.0",
+        "vlnv": "xilinx.com:interface:bram_rtl:1.0",
+        "parameters": {
+          "MASTER_TYPE": {
+            "value": "OTHER",
+            "value_src": "default"
+          },
+          "MEM_ECC": {
+            "value": "NONE",
+            "value_src": "default"
+          },
+          "MEM_SIZE": {
+            "value": "8192",
+            "value_src": "default"
+          },
+          "MEM_WIDTH": {
+            "value": "32",
+            "value_src": "default"
+          },
+          "READ_LATENCY": {
+            "value": "1",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "ADDR": {
+            "physical_name": "BRAM_PORTA_0_addr",
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "CLK": {
+            "physical_name": "BRAM_PORTA_0_clk",
+            "direction": "I"
+          },
+          "DIN": {
+            "physical_name": "BRAM_PORTA_0_din",
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "DOUT": {
+            "physical_name": "BRAM_PORTA_0_dout",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "WE": {
+            "physical_name": "BRAM_PORTA_0_we",
+            "direction": "I",
+            "left": "0",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "ports": {
+      "DR_2_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "DR_1_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "DW_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "AW_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "A_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "B_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "flags_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "ALU_out_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "wen_0": {
+        "direction": "I"
+      },
+      "AR_2_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "AR_1_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "ctrl_0": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      }
     },
     "components": {
       "blk_mem_gen_0": {
@@ -33,6 +181,190 @@
             "value": "Stand_Alone"
           }
         }
+      },
+      "ALU_0": {
+        "vlnv": "xilinx.com:module_ref:ALU:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_ALU_0_0",
+        "xci_path": "ip\\design_1_ALU_0_0\\design_1_ALU_0_0.xci",
+        "inst_hier_path": "ALU_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ALU",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ctrl": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "flags": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "ALU_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "register_file_0": {
+        "vlnv": "xilinx.com:module_ref:register_file:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_register_file_0_0",
+        "xci_path": "ip\\design_1_register_file_0_0\\design_1_register_file_0_0.xci",
+        "inst_hier_path": "register_file_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "register_file",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "wen": {
+            "direction": "I"
+          },
+          "AR_1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "AR_2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "AW": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "DW": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "DR_1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "DR_2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "BRAM_PORTA_0_1": {
+        "interface_ports": [
+          "BRAM_PORTA_0",
+          "blk_mem_gen_0/BRAM_PORTA"
+        ]
+      }
+    },
+    "nets": {
+      "ALU_0_ALU_out": {
+        "ports": [
+          "ALU_0/ALU_out",
+          "ALU_out_0"
+        ]
+      },
+      "ALU_0_flags": {
+        "ports": [
+          "ALU_0/flags",
+          "flags_0"
+        ]
+      },
+      "AR_1_0_1": {
+        "ports": [
+          "AR_1_0",
+          "register_file_0/AR_1"
+        ]
+      },
+      "AR_2_0_1": {
+        "ports": [
+          "AR_2_0",
+          "register_file_0/AR_2"
+        ]
+      },
+      "AW_0_1": {
+        "ports": [
+          "AW_0",
+          "register_file_0/AW"
+        ]
+      },
+      "A_0_1": {
+        "ports": [
+          "A_0",
+          "ALU_0/A"
+        ]
+      },
+      "B_0_1": {
+        "ports": [
+          "B_0",
+          "ALU_0/B"
+        ]
+      },
+      "DW_0_1": {
+        "ports": [
+          "DW_0",
+          "register_file_0/DW"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "register_file_0/clk"
+        ]
+      },
+      "ctrl_0_1": {
+        "ports": [
+          "ctrl_0",
+          "ALU_0/ctrl"
+        ]
+      },
+      "register_file_0_DR_1": {
+        "ports": [
+          "register_file_0/DR_1",
+          "DR_1_0"
+        ]
+      },
+      "register_file_0_DR_2": {
+        "ports": [
+          "register_file_0/DR_2",
+          "DR_2_0"
+        ]
+      },
+      "wen_0_1": {
+        "ports": [
+          "wen_0",
+          "register_file_0/wen"
+        ]
       }
     }
   }
