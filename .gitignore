@@ -11,6 +11,9 @@ cxl_error.log
 *.png
 *.zip
 
+/Projects/*
+/bin/*
+
 # UVVM
 _Alert.txt
 _Log.txt
